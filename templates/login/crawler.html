@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="http://127.0.0.1/crawler/" method="post">
+    <input type="text" name="keywords" />
+    <select>
+        <option value="netease">网易云</option>
+        <option value="qqmusic">QQ音乐</option>
+        <option value="xiami">虾米音乐</option>
+    </select>
+    <button name="search">搜索</button>
+</form>
+</div>
+<div id="lists">
+    {% for cra in crawl %}
+    <div class="list">
+        <div class="name">{{ cra.name }}</div>
+        <div class="author">{{ cra.author }}</div>
+        <div class="album">{{ cra.album }}</div>
+        <div class="url" id="{{ cra.url }}">播放</div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+</html>

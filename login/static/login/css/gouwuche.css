@@ -1,0 +1,50 @@
+#data{
+	width:685px;
+	padding:auto;
+	margin:auto;
+}
+.color{
+	color:blue;
+}
+#right{
+	width:80px;
+	height:50px;
+	float:right;
+}
+#photo{
+	width:480px;
+	height:100px;
+	padding:auto;
+	margin:auto;
+	background-color:gray;
+}
+.img{
+	width:80px;
+	height:80px;
+	padding:10px 20px;
+}
+#right button{
+	width:80px;
+	height:50px;
+	font-size:18px;
+	background-color:red;
+	color:white;
+}
+#sptj{
+	width:680px;
+	height:150px;
+	clear:both;
+	border:solid 1px;
+}
+.hide{
+	display:none;
+}
+#num{
+	color:green;
+}
+#sum{
+	color:red;
+}
+table{
+	border-spacing: 0px;
+}

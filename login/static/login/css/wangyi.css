@@ -1,0 +1,399 @@
+#big{
+	width:1500px;
+	height:970px;
+	margin:0 auto;
+	position:relative;
+}
+#top{
+	width:1500px;
+	height:40px;
+	background:red;
+	margin:0 auto;
+}
+#title{
+	margin:0 30px;
+	display:inline-block;
+}
+#load{
+	margin-left:800px;
+	display:inline-block;
+}
+#loadout{
+	margin-left:20px;
+	display:none;
+}
+#color{
+	margin-left:20px;
+	display:inline-block;
+}
+#mid{
+	width:1500px;
+	height:880px;
+	margin:0 auto;
+	background:#d0d0d0;
+	position:relative;
+	z-index:0;
+}
+#gq{
+	width:100%;
+	height:580px;
+}
+#gqtp{
+	width:500px;
+	height:100%;
+	display:inline-block;
+	margin-top:50px;
+	margin-left:50px;
+}
+#photo{
+	width:300px;
+	height:300px;
+	margin:0 auto;
+	background:url("../img/牧马城市 毛不易.jpg");
+	background-repeat:no-repeat;
+	background-size:100%;
+	border:50px solid rgba(0,0,0,1);
+	border-radius:50%;
+}
+.rotate{
+    animation:imgRotate 20s linear infinite;
+}
+@keyframes imgRotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(720deg);
+    }
+}
+#cz{
+	width:100%;
+	height:50px;
+	margin:100px auto;
+}
+#cz>button{
+	width:70px;
+	height:25px;
+	margin:0 30px;
+}
+#gqxx{
+	width:800px;
+	height:100%;
+	display:inline-block;
+	margin-left:60px;
+	float:right;
+}
+#xinx{
+	width:100%;
+	height:25px;
+}
+#xinx>div{
+	width:250px;
+	height:25px;
+	display:inline-block;
+	margin-left:10px;
+}
+a{
+	color:blue;
+}
+#show{
+	width:335px;
+	height:450px;
+	overflow:hidden;
+	margin:0 auto;
+	position:relative;
+	z-index:1;
+}
+#geci{
+	width:335px;
+	height:2074px;
+	margin:0 auto;
+	position:absolute;
+	top:200px;
+}
+#geci>p{
+	width:335px;
+	height:25px;
+	text-align:center;
+}
+#bot{
+	width:1500px;
+	height:50px;
+	background:red;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+#bot>*{
+	display:inline-block;
+}
+.btn{
+	width:25px;
+	height:25px;
+	border-radius:20px;
+	margin-top:15px;
+	margin-left:20px;
+	background:white;
+	text-align:center;
+	vertical-align:middle;
+}
+.time{
+	width:50px;
+	height:25px;
+	margin-left:20px;
+	display:inline-block;
+}
+#jingyin{
+	width:20px;
+	height:20px;
+	margin-left:100px;
+}
+.color{
+	color:red;
+}
+#list{
+	width:400px;
+	height:400px;
+	position:relative;
+	bottom:450px;
+	left:1080px;
+	background:white;
+	display:none;
+}
+#list-top{
+	width:100%;
+	height:30px;
+	display:inline-block;
+	background:gray;
+	text-align:center;
+	vertical-align:middle;
+}
+#list-num{
+	font-size:14px;
+	width:100%;
+	height:20px;
+	display:inline-block;
+	margin-left:20px;
+}
+.music{
+	width:100%;
+	height:30px;
+	margin-left:10px;
+}
+#xunhuan{
+	width:20px;
+	height:20px;
+	margin-left:50px;
+}
+#gc{
+	width:20px;
+	height:20px;
+	margin-left:50px;
+}
+#lists{
+	width:30px;
+	height:20px;
+	margin-left:50px;
+}
+#dingwei{
+	height:5px;
+	width:700px;
+	-webkit-box-shadow: 0 1px 0 0px #424242, 0 1px 0 #060607 inset, 0px 2px 10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset, 0 0px 1px rgba(0, 0, 0, 0.6) inset;
+	background-color: #F0F0F0;
+	border-radius: 15px;
+	-webkit-appearance: none;
+}
+#dingwei::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	cursor: default;
+	height: 10px;
+	width: 10px;
+	background: none repeat scroll 0 0 white;
+	border-radius: 15px;
+	-webkit-box-shadow: 0 -1px 1px black inset;
+}
+#loud{
+	height:5px;
+	width:100px;
+	-webkit-box-shadow: 0 1px 0 0px #424242, 0 1px 0 #060607 inset, 0px 2px 10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset, 0 0px 1px rgba(0, 0, 0, 0.6) inset;
+	background-color: #F0F0F0;
+	border-radius: 15px;
+	-webkit-appearance: none;
+}
+#loud::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height:12px;
+    width:12px;
+    background: #DCDCDC;
+    border-radius: 50%;
+}
+#loadin{
+	width:500px;
+	height:300px;
+	background:#00E3E3;
+	position:fixed;
+	top:200px;
+	left:600px;
+	display:none;
+}
+#close{
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+#loadin-top{
+	width:100%;
+	height:50px;
+	text-align:center;
+	margin-top:20px;
+	font-weight:bold;
+}
+.input{
+	width:240px;
+	height:50px;
+	margin:10px auto;
+}
+#denglu{
+	width:200px;
+	height:30px;
+	display:block;
+	font-size:15px;
+	margin:30px auto;
+	background:#AE57A4;
+	border:none;
+}
+#rember{
+	width:100px;
+	height:20px;
+	margin-left:150px;
+}
+#zmgc{
+	width:1000px;
+	height:50px;
+	font-size:22px;
+	display:none;
+}
+#wdl{
+	width:100%;
+	height:265px;
+	text-align:center;
+	font-size:18px;
+}
+#ydl{
+	width:100%;
+	height:265px;
+	display:none;
+	background:#d0d0d0;
+	overflow:auto;
+}
+.pltxt{
+	width:200px;
+	height:30px;
+	margin-left:100px;
+	margin-top:10px;
+	font-size:20px;
+}
+#pinglun{
+	width:1300px;
+	height:20px;
+	display:block;
+	margin:0 auto;
+}
+#hr1{
+	width:1300px;
+	margin:20px auto;
+}
+#zmgc{
+	width:1500px;
+	height:100px;
+	text-align:center;
+	color:#FF0080;
+	font-size:50px;
+	font-family:楷体;
+	display:none;
+	margin-top:20px;
+}
+.pl{
+	width:1300px;
+	height:50px;
+	margin:0 auto;
+}
+.touxiang{
+	width:50px;
+	height:50px;
+	display:inline-block;
+}
+.cntwrap{
+	width:1200px;
+	height:50px;
+	display:inline-block;
+}
+.nr{
+	width:100%;
+	height:30px;
+	font-size:14px;
+}
+.plname{
+	width:60px;
+	height:30px;
+	color:blue;
+}
+.plnr{
+	width:1000px;
+	height:30px;
+}
+.oth{
+	width:100%;
+	height:20px;
+}
+.pltime{
+	width:200px;
+	height:100%;
+	display:inline-block;
+	font-size:12px;
+}
+.plcz{
+	width:200px;
+	height:100%;
+	display:inline-block;
+	font-size:12px;
+	float:right;
+	color:green;
+}
+#inputpl{
+	width:300px;
+	height:200px;
+	position:fixed;
+	top:200px;
+	left:700px;
+	background:#FFD306;
+	display:none;
+}
+#closepl{
+	width:20px;
+	height:20px;
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+textarea{
+	width:200px;
+	height:100px;
+	display:block;
+	margin:0 auto;
+	margin-top:-40px;
+}
+#pltop{
+	width:150px;
+	height:50px;
+	font-size:16px;
+	margin:20px;
+}
+#postpl{
+	width:50px;
+	height:25px;
+	display:block;
+	margin:10px auto;
+}

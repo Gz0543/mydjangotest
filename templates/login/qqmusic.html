@@ -1,0 +1,179 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ音乐</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'login/css/qqmusic.css' %}">
+		<script src="{% static 'login/js/qqmusic.js' %}" type="text/javascript"></script>
+		<script src="{% static 'login/js/jquery-1.11.3.js' %}"></script>
+	</head>
+	<body>
+	<div class="bg"></div>
+		<div id="top">
+			<div id="logo"></div>
+			<div id="top-right">
+				<div id="set">设置</div>
+				<button id="loadin" onclick="loadin()">登录</button>
+				<div id="kehuduan"></div>
+				<div id="text">QQ音乐，千万高品质曲库尽享</div>
+			</div>
+		</div>
+		<div id="mid">
+			<div id="left">
+				<div id="mid-top">
+					<div><i id="shoucang" class="btn"></i>收藏</div>
+					<div><i id="tianjia" class="btn"></i>添加到</div>
+					<div><i id="xiazai" class="btn"></i>下载</div>
+					<div><i id="shanchu" class="btn"></i>删除</div>
+					<div><i id="qingkong" class="btn"></i>清空列表</div>
+				</div>
+				<div class="list">
+					<input type="checkbox" class="box" />
+					<div class="music">歌曲</div>
+					<div class="name">歌手</div>
+					<div class="time">时长</div>
+				</div>
+				<div class="list list-music">
+					<input type="checkbox" class="box" />
+					<div id="zzbf"></div>
+					<div class="music">牧马城市</div>
+					<div class="hidden" id="bofang"></div>
+					<div class="hidden" id="tianj"></div>
+					<div class="hidden" id="fenxiang"></div>
+					<div class="name">毛不易</div>
+					<div class="time" id="timer">04:18</div>
+					<div class="hidden" id="delete"></div>
+				</div>
+			</div>
+			<div id="right">
+				<div id="right-top">
+					<div id="zhuanji"><img src="{% static 'login/img/album_cover_player.png' %}" /></div>
+					<div class="xx">歌曲名：牧马城市</div>
+					<div class="xx">歌手名：毛不易</div>
+					<div class="xx">专辑名：老男孩 电视剧原声带</div>
+				</div>
+				<div id="show">
+					<div id="geci">
+						<p id="line0">&nbsp;</p>
+						<p id="line1">牧马城市（《老男孩》电视剧片尾曲）- 毛不易</p>
+						<p id="line2">词：段思思</p>
+						<p id="line3">曲：谭璇</p>
+						<p id="line4">编曲：蔡科俊</p>
+						<p id="line5">制作人：谭璇</p>
+						<p id="line6">吉他：蔡科俊</p>
+						<p id="line7">贝斯：蔡科俊</p>
+						<p id="line8">弦乐：国际首席爱乐乐团</p>
+						<p id="line9">录音：谭璇</p>
+						<p id="line10">混音：周天澈</p>
+						<p id="line11">和声：曾缔</p>
+						<p id="line12">录音棚：谭璇音乐工作室</p>
+						<p id="line13">出品：上海谭璇音乐工作室</p>
+						<p id="line14">游历在大街和楼房</p>
+						<p id="line15">心中是骏马和猎场</p>
+						<p id="line16">最了不起的脆弱和迷茫</p>
+						<p id="line17">不过就这样</p>
+						<p id="line18">天外有天有无常</p>
+						<p id="line19">山外有山有他乡</p>
+						<p id="line20">跌了撞了 心还是回老地方</p>
+						<p id="line21">游离于城市的痛痒</p>
+						<p id="line22">错过了心爱的姑娘</p>
+						<p id="line23">宣告世界的那个理想</p>
+						<p id="line24">已不知去向</p>
+						<p id="line25">为所欲为是轻狂</p>
+						<p id="line26">防不胜防是悲伤</p>
+						<p id="line27">后来才把成熟当偏方</p>
+						<p id="line28">当所有想的说的要的爱的</p>
+						<p id="line29">都挤在心脏</p>
+						<p id="line30">行李箱里装不下 我想去的远方</p>
+						<p id="line31">这来的去的给的欠的 算一种褒奖</p>
+						<p id="line32">风吹草低见惆怅 抬头至少还有光</p>
+						<p id="line33">游历在大街和楼房</p>
+						<p id="line34">心中是骏马和猎场</p>
+						<p id="line35">最了不起的脆弱和迷茫</p>
+						<p id="line36">不过就这样</p>
+						<p id="line37">天外有天有无常</p>
+						<p id="line38">山外有山有他乡</p>
+						<p id="line39">跌了撞了 心还是回老地方</p>
+						<p id="line40">游离于城市的痛痒</p>
+						<p id="line41">错过了心爱的姑娘</p>
+						<p id="line42">宣告世界的那个理想</p>
+						<p id="line43">已不知去向</p>
+						<p id="line44">为所欲为是轻狂</p>
+						<p id="line45">防不胜防是悲伤</p>
+						<p id="line46">后来才把成熟当偏方</p>
+						<p id="line47">当所有想的说的要的爱的</p>
+						<p id="line48">都挤在心脏</p>
+						<p id="line49">行李箱里装不下 我想去的远方</p>
+						<p id="line50">这来的去的给的欠的 算一种褒奖</p>
+						<p id="line51">风吹草低见惆怅</p>
+						<p id="line52">抬头至少还有光</p>
+						<p id="line53">把烦恼痛了吞了认了算了</p>
+						<p id="line54">不对别人讲</p>
+						<p id="line55">谁还没有辜负几段 昂贵的时光</p>
+						<p id="line56">若男孩笑了哭了累了</p>
+						<p id="line57">说要去流浪</p>
+						<p id="line58">留下大人的模样</p>
+						<p id="line59">看岁月剑拔弩张</p>
+						<p id="line60">总会有个人成为你的远方</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bot">
+			<div id="up"></div>
+			<audio id="mpeg">
+				<source src="{% static 'login/music/消愁 毛不易.mp3' %}" type="audio/mpeg" />
+			</audio>
+			<div id="play-pause" class="susp" onclick="play()"></div>
+			<div id="down"></div>
+			<div id="playing">
+				<div>牧马城市-毛不易</div>
+				<input id="dingwei" type="range" min="0" max="258" value="0" onmousemove="" />
+			</div>
+			<div id="xunhuan"></div>
+			<div id="like"></div>
+			<div id="download"></div>
+			<div id="pinglun"></div>
+			<div id="chunjing"></div>
+			<div id="shengyin">
+				<div id="jinyin"></div>
+				<input type="range" min="0" max="100" value="80" onmousemove=""/>
+			</div>
+		</div>
+		<div id="denglu">
+			<div id="fangshi">
+				<button id="byqq" onclick="qq()">QQ登录</button>
+				<button id="bywx" onclick="wx()">微信登录</button>
+				<div id="close" onclick="closeit()"></div>
+			</div>
+			<div id="qq">
+				<div id="qq-left">
+					<p id="tip-top">账号密码登录</p>
+					<div id="tj">推荐使用<b>快速安全登录</b>，防止盗号。</div>
+					<input type="text" class="txt" />
+					<input type="password" class="txt" />
+					<button id="anniu">授权并登录</button>
+					<div id="lianjie">
+					<a>忘了密码？</a>|
+					<a>注册新账号</a>|
+					<a>意见反馈</a>
+					</div>
+				</div>
+				<div id="qq-right">
+					<div><i>QQ音乐</i>将获得以下权限：</div>
+					<div><input type="checkbox" class="check" checked />全选</div>
+					<div><input type="checkbox" class="check" checked />获得您的昵称、头像、性别</div>
+					<div>授权后表明你已同意<i>QQ登录服务协议</i></div>
+				</div>
+			</div>
+			<div id="weixin">
+				<div id="erweima"></div>
+				<div id="tips">请使用微信扫描二维码登录</div>
+				<div class="tip">"QQ音乐"</div>
+				<div class="tip">QQ与微信账号的音乐资产、付费特权不互通</div>
+			</div>
+			<div id="xzkhd">下载客户端 体验更多内容</div>
+		</div>
+	</body>
+</html>

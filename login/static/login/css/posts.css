@@ -1,0 +1,12 @@
+.articletitle{
+    display: inline-block;
+    list-style: none;
+    width: 200px;
+    height: 600px;
+    float: left;
+}
+.articletext{
+    display: inline-block;
+    width: 500px;
+    height: 600px;
+}

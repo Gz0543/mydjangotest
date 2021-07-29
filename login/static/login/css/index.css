@@ -1,0 +1,33 @@
+.top{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: darkorange;
+}
+.title{
+	display: inline-block;
+	float: left;
+	width: 150px;
+	height: 100%;
+	font-size: 18px;
+    color: blue;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.load{
+	display: inline-block;
+	width:150px;
+	height: 100%;
+	float: right;
+    text-decoration: none;
+	text-align:center;
+	margin-top: 10px;
+}
+.text{
+    display: inline-block;
+	width: 1000px;
+	height: 500px;
+	position: fixed;
+	top: 70px;
+	left: 320px;
+}

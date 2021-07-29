@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容</title>
+    <link href="{% static 'login/css/posts.css' %}" rel="stylesheet"/>
+    <link href="{% static 'login/css/index.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<div class="top">
+    <a href="http://127.0.0.1/index/" class="title">首页</a>
+    {% for ca in allca %}
+    <a href="http://127.0.0.1/posts/{{ ca.id }}" class="title">{{ ca.name }}</a>
+    {% endfor %}
+    {% if request.session.user_name is empty %}
+    <div class="loadout load">
+        <a href="http://127.0.0.1/login/">登录</a>
+        <a href="http://127.0.0.1/register/">注册</a>
+    </div>
+    {% else %}
+    <div class="loadin load">
+        <b id="username">{{ request.session.user_name }}</b>
+        <a href="">退出</a>
+    </div>
+    {% endif %}
+</div>
+<div class="articletitle">
+    <ul>
+        {% for ar in allar %}
+        <li>
+            <a href="http://127.0.0.1/article/{{ ar.id }}">{{ ar.name }}</a>
+        </li>
+        {% endfor %}
+        <li>
+            <a href="http://127.0.0.1/project{{ id }}">项目展示</a>
+        </li>
+    </ul>
+</div>
+<div class="articletext">
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'login/css/index.css' %}" rel="stylesheet"/>
+    <link href="{% static 'login/css/article.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<div class="top">
+    <a href="http://127.0.0.1/index/" class="title">首页</a>
+    {% for ca in allca %}
+    <a href="http://127.0.0.1/posts/{{ ca.id }}" class="title">{{ ca.name }}</a>
+    {% endfor %}
+    {% if request.session.user_name is empty %}
+    <div class="loadout load">
+        <a href="http://127.0.0.1/login/">登录</a>
+        <a href="http://127.0.0.1/register/">注册</a>
+    </div>
+    {% else %}
+    <div class="loadin load">
+        <b id="username">{{ request.session.user_name }}</b>
+        <a href="">退出</a>
+    </div>
+    {% endif %}
+</div>
+<div class="articletitle">
+    <ul>
+        {% for ar in allar %}
+        <li>
+            <a href="http://127.0.0.1/article/{{ ar.id }}">{{ ar.name }}</a>
+        </li>
+        {% endfor %}
+        <li>
+            <a href="http://127.0.0.1/project{{ id }}">项目展示</a>>
+        </li>
+    </ul>
+</div>
+<div class="text">
+    {{ onear.text }}
+</div>
+<div class="comment">
+    {% if new_comment %}
+    <h2>Your comment has been added.</h2>
+    {% else %}
+    <h2>添加新评论</h2>
+    <form action="/article/{{ onear.id }}/comment/" method="post">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-12">
+                <label for="{{ form.text.id_for_label }}">评论：</label>
+                {{ form.text }}
+                <button type="submit" class="comment-btn">发表</button>
+            </div>
+        </div>
+    </form>
+    {% endif %}
+    <ul>
+        {% for co in allco %}
+        <li>
+            <b>{{ co.name }}</b>
+            <p>{{ co.text }}</p>
+            <div>{{ co.created_time }}</div>
+        </li>
+        {% empty %}
+        <span>还没有评论，快来抢沙发吧。</span>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

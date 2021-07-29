@@ -1,0 +1,125 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="{% static 'login/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'login/js/wangyi.js' %}">
+    <link rel="stylesheet" href="{% static 'login/css/wangyi.css' %}">
+    <script src="{% static 'login/js/jquery-1.11.3.js' %}"></script>
+</head>
+<body>
+<div id="big">
+    <div id="top">
+        <div id="title">网易云音乐</div>
+        <input id="find" type="text" placeholder="搜索音乐"/>
+        <div id="load"><i class="fa fa-user-circle-o"></i>登录</div>
+        <div id="loadout">退出</div>
+        <div id="color"><i class="fa fa-cog"></i>皮肤<input id="changecolor" type="color" value="#FF0000"/></div>
+    </div>
+    <div id="mid">
+        <div id="gq">
+            <div id="gqtp">
+                <div id="photo" class=""></div>
+                <div id="cz">
+                    <button id="love"><i class="fa fa-heart-o"></i>喜欢</button>
+                    <button id="shoucang"><i class="fa fa-folder-o"></i>收藏</button>
+                    <button><i class="fa fa-download"></i>下载</button>
+                    <button><i class="fa fa-share-square-o"></i>分享</button>
+                </div>
+            </div>
+            <div id="gqxx">
+                <h1>牧马城市</h1>
+                <div id="xinx">
+                    <div>专辑：<a id="zj">《老男孩》电视剧片尾曲</a></div>
+                    <div>歌手：<a id="name">毛不易</a></div>
+                    <div>专辑：<a>搜索页</a></div>
+                </div>
+                <div id="show">
+                    <div id="geci"></div>
+                </div>
+            </div>
+        </div>
+        <hr id="hr1"/>
+        <div id="plq">
+            <div id="wdl">登录后可发表/查看评论</div>
+            <div id="ydl">
+                <div class="pltxt">评论</div>
+                <input id="pinglun" type="text"/>
+                <div id="inputpl">
+                    <div id="pltop">歌曲：<span id="mscnm"></span></div>
+                    <div id="closepl" onclick="closeit()"><i class="fa fa-times"></i></div>
+                    <textarea></textarea>
+                    <button id="postpl">评论</button>
+                </div>
+                <div class="pltxt">精彩评论</div>
+                <hr id="hr2"/>
+                <div class="pl" id="first">
+                    <img class="touxiang"/>
+                    <div class="cntwrap">
+                        <div class="nr">
+                            <span class="plname"></span>
+                            <span class="plnr"></span>
+                        </div>
+                        <div class="oth">
+                            <div class="pltime"></div>
+                            <div class="plcz">点赞|回复</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl">
+                    <img class="touxiang"/>
+                    <div class="cntwrap">
+                        <div class="nr">
+                            <span class="plname"></span>
+                            <span class="plnr"></span>
+                        </div>
+                        <div class="oth">
+                            <div class="pltime"></div>
+                            <div class="plcz">点赞|回复</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loadin">
+        <div id="loadin-top">用户登录</div>
+        <div id="close"><i class="fa fa-times"></i></div>
+        <div class="input">用户名：<input id="username" type="text"/></div>
+        <div class="input">密&nbsp;&nbsp;&nbsp;码：<input id="pswd" type="password"/></div>
+        <div id="rember"><input type="checkbox"/>记住密码</div>
+        <button id="denglu">登录</button>
+    </div>
+    <div id="bot">
+        <div class="btn" title="上一首" onclick="shangyishou()"><i id="left" class="fa fa-chevron-left fa-lg"></i></div>
+        <div class="btn"><i id="play" title="播放" class="fa fa-play fa-lg"></i></div>
+        <div class="btn" title="下一首" onclick="xiayishou()"><i id="right" class="fa fa-chevron-right fa-lg"></i></div>
+        <div class="time" id="now">00:00</div>
+        <input id="dingwei" type="range" min="0" max="300" value="0" title="定位"/>
+        <div class="time" id="all"></div>
+        <div id="jingyin" title="静音"><i class="fa fa-volume-up"></i></div>
+        <input id="loud" oninput="chengevloud()" type="range" min="0" max="100" value="100" title="100"/>
+        <div><i id="xunhuan" title="列表循环" class="fa fa-exchange"></i></div>
+        <div title="桌面歌词"><i id="gc" class="fa fa-file"></i></div>
+        <div title="播放列表" id="lists"><i class="fa fa-th-list"></i><span>4</span></div>
+        <div id="list">
+            <span id="list-top">播放列表</span>
+            <span id="list-num">共4首</span>
+            <div id="songs_list">
+                <div class="music" ondblclick="play(this)">牧马城市 毛不易</div>
+                <div class="music" ondblclick="play(this)">不染 毛不易</div>
+                <div class="music" ondblclick="play(this)">消愁 毛不易</div>
+                <div class="music" ondblclick="play(this)">像我这样的人 毛不易</div>
+            </div>
+        </div>
+        <div id="zmgc"></div>
+        <audio id="mpeg">
+            <source src="{% static 'login/music/牧马城市 毛不易.mp3' %}" type="audio/mpeg"/>
+        </audio>
+        <script src="{% static 'login/js/wangyi.js' %}"></script>
+	</div>
+</div>
+</body>
+</html>

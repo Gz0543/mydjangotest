@@ -1,0 +1,14 @@
+.articletitle{
+    display: inline-block;
+    float: left;
+    list-style: none;
+    width: 300px;
+    height: 500px;
+}
+.comment{
+    width: 1000px;
+    height:200px;
+	position: fixed;
+	top: 800px;
+	left:320px;
+}

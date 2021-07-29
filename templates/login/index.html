@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link href="{% static 'login/css/index.css' %}" rel="stylesheet"/>
+    <script src="{% static 'login/js/jquery-1.11.3.js' %}"></script>
+    <script>
+        console.log({{ request.session.user_name }})
+    </script>
+</head>
+<body>
+<div class="top">
+    <a href="http://127.0.0.1/index/" class="title">首页</a>
+    {% for ca in allca %}
+    <a href="http://127.0.0.1/posts/{{ ca.id }}" class="title">{{ ca.name }}</a>
+    {% endfor %}
+    {% if request.session.user_name is empty %}
+        <div class="loadout load">
+            <a href="http://127.0.0.1/login/">登录</a>
+            <a href="http://127.0.0.1/register/">注册</a>
+        </div>
+    {% else %}
+        <div class="loadin load">
+            <b id="username">{{ request.session.user_name }}</b>
+            <a href="http://127.0.0.1/logout/">退出</a>
+        </div>
+    {% endif %}
+</div>
+<div class="text">
+    <h2>网站说明</h2>
+    <p>本网站基于python3.5.1，Django2.2.10，数据库MySQL5.6支持，目前属于学习调试阶段</p>
+</div>
+</body>
+</html>
